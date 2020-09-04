@@ -56,3 +56,41 @@ function doneEdit(btn) {
 		outBound = newInputValue;
 	}
 }
+
+function makeBoilerPlateRows(tableClass) {
+	// Begin making header-rows for each table
+	var addHeaderRow = document.createElement("TR");
+	// Add HeaderRow attribute
+	addHeaderRow.setAttribute("class", tableClass + "-header-row");
+
+	// Begin making one reg-row for each table
+	var addRegRow = document.createElement("TR");
+	// Add HeaderRow attribute
+	addRegRow.setAttribute("class", tableClass + "-reg-row");
+
+	var tableChoice = document.querySelector("." + tableClass);
+	// Append tr to tableClass
+	tableChoice.appendChild(addHeaderRow);
+	tableChoice.appendChild(addRegRow);
+}
+
+function makeTables() {
+	// Create a <table> element
+	var addTable = document.createElement("TABLE");
+	// Create a <table> element
+	var dispTable = document.createElement("TABLE");
+	// Add Class to table
+	addTable.setAttribute("class","addCustTbl"); 
+	// Add Class to table
+	dispTable.setAttribute("class","dispCustTbl"); 
+
+	var inFollowUpSec = document.querySelector(".followUpTable")
+	// Append <table> to .followUpTable from index.html
+	inFollowUpSec.appendChild(addTable);
+	inFollowUpSec.appendChild(dispTable);	
+
+	makeBoilerPlateRows("addCustTbl");
+	makeBoilerPlateRows("dispCustTbl");
+}
+
+makeTables();
