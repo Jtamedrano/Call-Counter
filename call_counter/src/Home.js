@@ -39,6 +39,7 @@ class CounterBox extends Component {
     return (
       <div className="counterBox">
         <div className="counterBox_container">
+          <h2>Outbound Calls</h2>
           <Counter />
         </div>
       </div>

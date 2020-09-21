@@ -5,10 +5,16 @@
 }
 
 .counterBox_container {
-  padding: 0.5rem 1.5rem;
+  padding: 1.5rem 2rem;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   margin-bottom: 20px;
+}
+
+.counterBox_container > h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
 .counter_container {
