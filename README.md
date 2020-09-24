@@ -10,3 +10,9 @@ Local Web-App to track outbound calls
   - [ ] Able to login
   - [ ] Able to View day to day Data
   - [ ] Able to edit/delete Data
+  
+## Additional Features
+* Basic Todo List with basic CRUD functions
+  * Can add ToDo Item with optional time slot
+  * Can Filter List to All, Complete, Or Not Completed
+  - [ ] *Pending: Edit Item*
