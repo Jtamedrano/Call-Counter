@@ -1,32 +1,44 @@
 import React, { Component } from "react";
 import "./Home.css";
+import Todo from "./Components/Todo";
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
+  state = {
+    newLead: 0,
+    outBound: 0,
+  };
 
   render() {
     return (
       <div className="counter">
         <div className="counter_container">
+          <div className="counters">
+            <div className="lineOne">
+              <div className="counter_item">
+                <strong>Leads Called</strong>
+                <p>{this.state.newLead}</p>
+              </div>
+              <div className="counter_item">
+                <strong>Total Calls</strong>
+                <p>{this.state.outBound}</p>
+              </div>
+            </div>
+          </div>
           <button
             onClick={() =>
-              this.state.count > 0
-                ? this.setState({ count: this.state.count - 1 })
-                : 0
+              this.setState({
+                newLead: this.state.newLead + 1,
+                outBound: this.state.outBound + 1,
+              })
             }
           >
-            -
+            New Lead
           </button>
-          <p>{this.state.count}</p>
+
           <button
-            onClick={() => this.setState({ count: this.state.count + 1 })}
+            onClick={() => this.setState({ outBound: this.state.outBound + 1 })}
           >
-            +
+            Outbound
           </button>
         </div>
       </div>
@@ -52,6 +64,7 @@ export default class Home extends Component {
     return (
       <div className="home">
         <div className="home_container">
+          <Todo />
           <CounterBox />
         </div>
       </div>
