@@ -1,0 +1,95 @@
+.home {
+  flex: 1;
+}
+
+.home_container {
+  height: 95%;
+  display: flex;
+}
+
+.counterBox_container {
+  padding: 1.5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.counterBox_container > h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.counter_container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.counter_container p {
+  font-size: 2.5rem;
+}
+
+.counters {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.lineOne,
+.lineTwo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.lineTwo {
+  font-size: 2.5rem;
+}
+
+.counter_item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.counter_container button {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6e99f7;
+  border: 1px solid #6e99f7;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.counter_container button:focus {
+  outline: none;
+}
+
+.counter_container button:active {
+  opacity: 70%;
+}
+
+/* 2688x1242px at 458ppi */
+@media only screen and (max-width: 425px) {
+  .home_container {
+    flex-flow: column;
+  }
+}
